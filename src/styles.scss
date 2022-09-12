@@ -1,0 +1,227 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+
+  font-family: 'Open Sans';
+  font-size: 14px;
+  color: #111;
+  letter-spacing: 0.5px;
+  background: #f2f2f2;
+}
+
+.fullscreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: scroll;
+  max-height: 100%;
+  max-width: 100%;
+  background: darkslategrey;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #f7f7f7;
+  border-bottom: 1px solid gray;
+  height: 50px;
+  display: flex;
+  align-items: end;
+  justify-content: flex-start;
+  //padding: 5px;
+}
+
+.content {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: calc(100% - 120px);
+}
+
+.tab-area {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100% - 50px);
+  border: 1.5px solid gray;
+  overflow: scroll;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  //background: #f7f7f7;
+  border-top: 1px solid gray;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 5px;
+}
+
+.btn {
+  padding: 5px;
+  margin-right: 5px;
+  width: 120px;
+  border: 1px solid gray;
+  cursor: pointer;
+  background: none;
+
+  &:active {
+    background: gold;
+  }
+
+  &:hover {
+    background: gold;
+    transition: .2s ease-in;
+  }
+}
+
+.nav-button {
+  padding: 5px;
+  margin-right: 5px;
+  width: 120px;
+  border: 1px solid gray;
+  cursor: pointer;
+  background: none;
+  border-bottom: none;
+  border-top-left-radius: 5px;
+  text-align: center;
+
+  &:active {
+    background: gold;
+  }
+
+  &:hover {
+    background: gold;
+    transition: .2s ease-in;
+  }
+}
+
+
+.field {
+  margin-left: 23px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  font-style: italic;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.table-info {
+  margin: 8px;
+  border: 1px dotted gray;
+}
+
+.table-name {
+  font-weight: bold;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+
+.vstack {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.hstack {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.vbuttons {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.hbuttons {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.btn-opt {
+  cursor: pointer;
+  border: 1px solid gray;
+  padding: 2px;
+  margin: 2px;
+
+  &:active {
+    background: gold;
+  }
+
+  &:hover {
+    background: gold;
+    transition: .2s ease-in;
+  }
+}
+
+.desc {
+  padding: 0;
+  margin-top: 8px;
+  text-align: center;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: bold;
+  width: 100%;
+}
+
+.vbuttons-spec {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: calc(100% - 50px);
+  overflow-y: scroll;
+  width: 86px;
+  border: 1px solid gray;
+  margin-left: 8px;
+}
+
+.btn-spec {
+  cursor: pointer;
+  border: 1px solid gray;
+  padding: 5px;
+  margin: 2px;
+  text-align: center;
+
+  &:active {
+    background: gold;
+  }
+
+  &:hover {
+    background: gold;
+    transition: .2s ease-in;
+  }
+}
+
+
+
+
+
+
+
+
+

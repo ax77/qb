@@ -1,0 +1,21 @@
+<div class="fullscreen">
+  <div class="nav">
+    <a class="nav-button" [routerLink]="['builder']">Fields</a>
+    <a class="nav-button" [routerLink]="['/builder', 'join']">Joins</a>
+    <a class="nav-button">Conditions</a>
+    <a class="nav-button">Grouping</a>
+    <a class="nav-button">Having</a>
+    <a class="nav-button">Unions/Aliases</a>
+    <a class="nav-button">Ordering</a>
+  </div>
+
+<!--  <div class="content">-->
+    <router-outlet></router-outlet>
+<!--  </div>-->
+
+  <div class="footer">
+    <button class="btn" type="button">Cancel</button>
+    <button class="btn" type="button">Save</button>
+    <button class="btn" type="button">Execute</button>
+  </div>
+</div>

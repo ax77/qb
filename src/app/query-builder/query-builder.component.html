@@ -1,0 +1,227 @@
+<div class="content">
+
+  <!--  database-->
+
+  <div class="vstack">
+
+    <div class="desc">Database</div>
+
+    <div class="hbuttons">
+      <button class="material-icons btn-opt">
+        edit
+      </button>
+      <button class="material-icons btn-opt">
+        delete
+      </button>
+      <button class="material-icons btn-opt">
+        unfold_more
+      </button>
+      <button class="material-icons btn-opt">
+        unfold_less
+      </button>
+    </div>
+    <div class="hstack">
+      <div class="tab-area">
+
+        <ul>
+
+          <div *ngFor="let tab of databaseTables; let i = index">
+            <div class="table-info">
+
+              <!-- the name of the table, and the expand button-->
+              <div class="hstack"
+                   [ngClass]="{ 'selected-table': tab.tableName == databaseTables_selectedTableName }"
+              >
+                <button
+                  class="btn-plus"
+                  (click)="databaseTables_expandListButtonClick($event, tab)"
+                >+
+                </button>
+                <div
+                  class="table-name"
+                  (dblclick)="databaseTables_tableNameDblClick($event, tab)"
+                  (click)="databaseTables_tableNameClick(tab)"
+                >
+                  <div>{{tab.tableName}}</div>
+                </div>
+              </div>
+
+              <!-- all of the fields of this table-->
+              <div
+                class="field"
+                *ngFor="let f of tab.fields"
+                [ngStyle]="{'display': databaseTablesDisplayBindings[f.id]}"
+                (dblclick)="databaseTables_fieldNameDblClick($event, f)"
+              >
+                <div>{{f.name}}</div>
+              </div>
+            </div>
+          </div>
+
+        </ul>
+
+      </div>
+      <div class="vbuttons">
+        <button class="btn-opt">></button>
+        <button class="btn-opt">>></button>
+        <button class="btn-opt"><</button>
+        <button class="btn-opt"><<</button>
+      </div>
+    </div>
+  </div>
+
+  <!--  Tables-->
+
+  <div class="vstack">
+
+    <div class="desc">Tables</div>
+
+    <div class="hbuttons">
+      <button class="material-icons btn-opt">
+        edit
+      </button>
+      <button class="material-icons btn-opt" (click)="selectedTables_deleteSelectedTable()">
+        delete
+      </button>
+    </div>
+
+    <div class="hstack">
+      <div class="tab-area">
+
+        <ul>
+
+          <div *ngFor="let tab of selectedTables; let i = index">
+            <div class="table-info">
+
+              <div class="hstack"
+                   [ngClass]="{ 'selected-table': tab.tableName == selectedTables_selectedTableName }"
+              >
+                <button
+                  class="btn-plus"
+                  (click)="selectedTables_expandListButtonClick($event, tab)"
+                >+
+                </button>
+                <div
+                  class="table-name"
+                  (dblclick)="selectedTables_tableNameDblClick($event, tab)"
+                  (click)="selectedTables_tableNameClick(tab)"
+                >
+                  <div>{{tab.tableName}}</div>
+                </div>
+              </div>
+
+              <div
+                class="field"
+                *ngFor="let f of tab.fields"
+                [ngStyle]="{'display': selectedTablesDisplayBindings[f.id]}"
+                (dblclick)="selectedTables_fieldNameDblClick($event, f)"
+              >
+                <div>{{f.name}}</div>
+              </div>
+            </div>
+          </div>
+
+        </ul>
+
+      </div> <!-- tab-area -->
+
+      <div class="vbuttons">
+        <button class="btn-opt">></button>
+        <button class="btn-opt">>></button>
+        <button class="btn-opt"><</button>
+        <button class="btn-opt"><<</button>
+      </div>
+
+    </div> <!-- hstack -->
+  </div> <!-- vstack -->
+
+  <!--  Fields-->
+
+  <div class="vstack">
+
+    <div class="desc">Fields</div>
+
+    <div class="hbuttons">
+      <button class="material-icons btn-opt">
+        edit
+      </button>
+      <button class="material-icons btn-opt">
+        delete
+      </button>
+    </div>
+
+    <div class="hstack">
+      <div class="tab-area">
+
+        <ul>
+
+          <div
+            class="field"
+            *ngFor="let f of selectedFields"
+          >
+            <div>{{f}}</div>
+          </div>
+
+        </ul>
+
+      </div>
+      <div class="vbuttons-spec">
+        <button class="btn-spec">u1</button>
+        <button class="btn-spec">u2</button>
+        <button class="btn-spec">u320</button>
+        <button class="btn-spec">u1</button>
+        <button class="btn-spec">u2</button>
+        <button class="btn-spec">u320</button>
+        <button class="btn-spec">u1</button>
+        <button class="btn-spec">u2</button>
+        <button class="btn-spec">u320</button>
+        <button class="btn-spec">u1</button>
+        <button class="btn-spec">u2</button>
+        <button class="btn-spec">u320</button>
+        <button class="btn-spec">u1</button>
+        <button class="btn-spec">u2</button>
+        <button class="btn-spec">u320</button>
+        <button class="btn-spec">u1</button>
+        <button class="btn-spec">u2</button>
+        <button class="btn-spec">u320</button>
+        <button class="btn-spec">u1</button>
+        <button class="btn-spec">u2</button>
+        <button class="btn-spec">u320</button>
+        <button class="btn-spec">u1</button>
+        <button class="btn-spec">u2</button>
+        <button class="btn-spec">u320</button>
+        <button class="btn-spec">u1</button>
+        <button class="btn-spec">u2</button>
+        <button class="btn-spec">u320</button>
+        <button class="btn-spec">u1</button>
+        <button class="btn-spec">u2</button>
+        <button class="btn-spec">u320</button>
+        <button class="btn-spec">u1</button>
+        <button class="btn-spec">u2</button>
+        <button class="btn-spec">u320</button>
+        <button class="btn-spec">u1</button>
+        <button class="btn-spec">u2</button>
+        <button class="btn-spec">u320</button>
+        <button class="btn-spec">u1</button>
+        <button class="btn-spec">u2</button>
+        <button class="btn-spec">u320</button>
+        <button class="btn-spec">u1</button>
+        <button class="btn-spec">u2</button>
+        <button class="btn-spec">u320</button>
+        <button class="btn-spec">u1</button>
+        <button class="btn-spec">u2</button>
+        <button class="btn-spec">u320</button>
+        <button class="btn-spec">u1</button>
+        <button class="btn-spec">u2</button>
+        <button class="btn-spec">u320</button>
+        <button class="btn-spec">u1</button>
+        <button class="btn-spec">u2</button>
+        <button class="btn-spec">u320</button>
+        <button class="btn-spec">u1</button>
+        <button class="btn-spec">u2</button>
+        <button class="btn-spec">u320</button>
+
+      </div>
+    </div>
+  </div>
+</div>

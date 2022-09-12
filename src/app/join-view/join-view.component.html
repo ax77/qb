@@ -1,0 +1,82 @@
+<div class="content">
+
+  <div class="vstack">
+
+    <div class="hbuttons">
+      <button class="material-icons btn-opt" (click)="addNewJoin()">
+        add_circle
+      </button>
+      <button class="material-icons btn-opt">
+        edit
+      </button>
+
+    </div>
+
+    <div class="join-table">
+
+      <div class="join-table-row" *ngFor="let join of joins">
+
+        <div class="join-table-cell">
+          <button class="material-icons btn-opt" (click)="deleteCurrentJoin(join)">
+            delete
+          </button>
+        </div>
+
+        <div class="join-table-cell">
+          <select>
+            <option>INNER JOIN</option>
+            <option>LEFT OUTER JOIN</option>
+            <option>RIGHT OUTER JOIN</option>
+            <option>FULL OUTER JOIN</option>
+          </select>
+        </div>
+
+        <div class="join-table-cell">
+          <select (change)="leftTableSelectChange($event)">
+            <option></option>
+            <option *ngFor="let t of selectedTables">{{t.tableName}}</option>
+          </select>
+        </div>
+
+        <div class="join-table-cell">
+          <select (change)="rightTableSelectChange($event)">
+            <option></option>
+            <option *ngFor="let t of selectedTables">{{t.tableName}}</option>
+          </select>
+        </div>
+
+        <div>ON</div>
+
+        <div class="join-table-cell">
+          <select>
+            <option></option>
+            <option *ngFor="let el of leftTableFields">{{el.name}}</option>
+          </select>
+        </div>
+
+        <!-- and here the condition-->
+        <div class="join-table-cell">
+          <select>
+            <option> = </option>
+            <option> <> </option>
+            <option> < </option>
+            <option> > </option>
+            <option> <= </option>
+            <option> >= </option>
+          </select>
+        </div>
+
+        <div class="join-table-cell">
+          <select>
+            <option></option>
+            <option *ngFor="let el of rightTableFields">{{el.name}}</option>
+          </select>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

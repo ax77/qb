@@ -1,0 +1,25 @@
+.join-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.join-table-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 2px;
+  padding: 2px;
+  width: 100%;
+  border: 1px solid gray;
+}
+
+.join-table-cell {
+  margin: 5px;
+}
+
+select {
+  min-width: 230px;
+}
